@@ -1,0 +1,988 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/20/2023 8:46:51 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-RUM36UI"
+  DTS:CreatorName="DESKTOP-RUM36UI\Juan J Blanco M"
+  DTS:DTSID="{015DCDE7-A22D-48C5-B5FE-0A0026CFCC20}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{1832E32C-5FEC-467D-94C8-D1A96C2F3199}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{929BA500-D6EC-43CA-94F0-BC309DE2EC55}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\DC_COLUMN_CONVERSION"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DC_COLUMN_CONVERSION"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[DEPARTAMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DEPARTAMENTO"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MUNICIPIO"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[CODIGO DANE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODIGO DANE"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CODIGO DANE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[ARMAS MEDIOS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ARMAS MEDIOS"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[ARMAS MEDIOS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[FECHA HECHO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FECHA HECHO"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[GRUPO EDAD PERSONA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GRUPO EDAD PERSONA"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[CANTIDAD ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CANTIDAD "
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CANTIDAD ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[GENERO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GENERO"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GENERO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="150"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      name="STR_NOMBRE_DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,150,1252)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[DEPARTAMENTO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,150,1252)DEPARTAMENTO</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_NOMBRE_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="150"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_NOMBRE_MUNICIPIO]"
+                      name="STR_NOMBRE_MUNICIPIO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,150,1252)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[MUNICIPIO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,150,1252)MUNICIPIO</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_CODIGO_DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_CODIGO_DANE]"
+                      name="STR_CODIGO_DANE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,20,1252)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CODIGO DANE]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,20,1252)[CODIGO DANE]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_ARMAS_MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="150"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_ARMAS_MEDIOS]"
+                      name="STR_ARMAS_MEDIOS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,150,1252)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[ARMAS MEDIOS]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,150,1252)[ARMAS MEDIOS]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[DT_FECHA_HECHO]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[DT_FECHA_HECHO]"
+                      name="DT_FECHA_HECHO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]}) == "" ? NULL(DT_DBTIMESTAMP) : (DT_DBTIMESTAMP)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([FECHA HECHO]) == "" ? NULL(DT_DBTIMESTAMP) : (DT_DBTIMESTAMP)[FECHA HECHO]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      name="STR_GRUPO_EDAD_PERSONA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]}) == "" ? (DT_STR,20,1252)"NO REGISTRA" : (DT_STR,20,1252)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([GRUPO EDAD PERSONA]) == "" ? (DT_STR,20,1252)"NO REGISTRA" : (DT_STR,20,1252)[GRUPO EDAD PERSONA]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[INT_CANTIDAD]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[INT_CANTIDAD]"
+                      name="INT_CANTIDAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CANTIDAD ]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)[CANTIDAD ]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_GENERO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_GENERO]"
+                      name="STR_GENERO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GENERO]}) == "" ? (DT_STR,20,1252)"NO REGISTRA" : (DT_STR,20,1252)#{Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GENERO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(GENERO) == "" ? (DT_STR,20,1252)"NO REGISTRA" : (DT_STR,20,1252)GENERO</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\FF_VIOLENCE"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="9226"
+              name="FF_VIOLENCE"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\FF_VIOLENCE.Connections[FlatFileConnection]"
+                  connectionManagerID="{829BC02B-52E2-44A2-9CC0-BE40E0AE1F4D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_FF_VIOLENCE]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[DEPARTAMENTO]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[DEPARTAMENTO]"
+                      name="DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[MUNICIPIO]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[MUNICIPIO]"
+                      name="MUNICIPIO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CODIGO DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[CODIGO DANE]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CODIGO DANE]"
+                      name="CODIGO DANE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[ARMAS MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[ARMAS MEDIOS]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[ARMAS MEDIOS]"
+                      name="ARMAS MEDIOS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[FECHA HECHO]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]"
+                      name="FECHA HECHO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GENERO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[GENERO]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GENERO]"
+                      name="GENERO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[GRUPO EDAD PERSONA]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]"
+                      name="GRUPO EDAD PERSONA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CANTIDAD ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD ]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CANTIDAD ]"
+                      name="CANTIDAD "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[CODIGO DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CODIGO DANE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[ARMAS MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ARMAS MEDIOS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[FECHA HECHO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FECHA HECHO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[GENERO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GENERO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[GRUPO EDAD PERSONA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GRUPO EDAD PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CANTIDAD " />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\TBL_VIOLENCE_STG"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TBL_VIOLENCE_STG"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[TBL_VIOLENCE_STG]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Connections[OleDbConnection]"
+                  connectionManagerID="{4A48367E-11FA-42C0-87D5-718D5EADAE69}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_STG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="STR_NOMBRE_DEPARTAMENTO"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_NOMBRE_DEPARTAMENTO]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_NOMBRE_DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[STR_NOMBRE_MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="STR_NOMBRE_MUNICIPIO"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_NOMBRE_MUNICIPIO]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_NOMBRE_MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[STR_CODIGO_DANE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="STR_CODIGO_DANE"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_CODIGO_DANE]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_CODIGO_DANE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[STR_ARMAS_MEDIOS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="STR_ARMAS_MEDIOS"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_ARMAS_MEDIOS]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_ARMAS_MEDIOS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[DT_FECHA_HECHO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DT_FECHA_HECHO"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_HECHO]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[DT_FECHA_HECHO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="STR_GRUPO_EDAD_PERSONA"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_GRUPO_EDAD_PERSONA]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_GRUPO_EDAD_PERSONA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[INT_CANTIDAD]"
+                      cachedDataType="i4"
+                      cachedName="INT_CANTIDAD"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[INT_CANTIDAD]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[INT_CANTIDAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].Columns[STR_GENERO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="STR_GENERO"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_GENERO]"
+                      lineageId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output].Columns[STR_GENERO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_NOMBRE_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="STR_NOMBRE_DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_NOMBRE_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="STR_NOMBRE_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_CODIGO_DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="STR_CODIGO_DANE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_ARMAS_MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="STR_ARMAS_MEDIOS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_HECHO]"
+                      dataType="dbTimeStamp"
+                      name="DT_FECHA_HECHO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_GRUPO_EDAD_PERSONA]"
+                      dataType="wstr"
+                      length="20"
+                      name="STR_GRUPO_EDAD_PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[INT_CANTIDAD]"
+                      dataType="i4"
+                      name="INT_CANTIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input].ExternalColumns[STR_GENERO]"
+                      dataType="wstr"
+                      length="20"
+                      name="STR_GENERO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE_STG.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_VIOLENCE_STG.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE_STG.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\TBL_VIOLENCE_STG.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNC VIOLENCE_STG"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{89AB285A-4645-4587-8E1B-64C208421BCD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNC VIOLENCE_STG"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4A48367E-11FA-42C0-87D5-718D5EADAE69}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[TBL_VIOLENCE_STG];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{25CDD295-EC20-4691-A5CF-A76C31E83900}"
+      DTS:From="Package\TRUNC VIOLENCE_STG"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="429,177" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\TRUNC VIOLENCE_STG"
+          TopLeft="409,74" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="504.25,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Data Flow Task\FF_VIOLENCE"
+          TopLeft="401,73" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Data Flow Task\DC_COLUMN_CONVERSION"
+          TopLeft="371,186" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="475,115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71"
+              Start="0,0"
+              End="0,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\TBL_VIOLENCE_STG"
+          TopLeft="387,310" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="475.75,228">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TBL_VIOLENCE_STG">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

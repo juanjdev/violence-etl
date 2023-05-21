@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CNX_VIOLENCE_STG"
+  DTS:DTSID="{4A48367E-11FA-42C0-87D5-718D5EADAE69}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-RUM36UI\SQLSERVER;Initial Catalog=VIOLENCE_STG;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{4A48367E-11FA-42C0-87D5-718D5EADAE69}DESKTOP-RUM36UI\SQLSERVER.VIOLENCE_STG;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
