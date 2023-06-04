@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-RUM36UI"
   DTS:CreatorName="DESKTOP-RUM36UI\Juan J Blanco M"
-  DTS:DTSID="{015DCDE7-A22D-48C5-B5FE-0A0026CFCC20}"
+  DTS:DTSID="{2AA129AD-7F76-46A6-A37F-C47D26E24AAE}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5131.0"
   DTS:LocaleID="3082"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="EL_VIOLENCE"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{1832E32C-5FEC-467D-94C8-D1A96C2F3199}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{A882F10F-DF3C-46C7-AA5B-25503D846351}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -46,56 +46,56 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[DEPARTAMENTO]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="DEPARTAMENTO"
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[DEPARTAMENTO]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[MUNICIPIO]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="MUNICIPIO"
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[MUNICIPIO]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[CODIGO DANE]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="CODIGO DANE"
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CODIGO DANE]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[ARMAS MEDIOS]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ARMAS MEDIOS"
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[ARMAS MEDIOS]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[FECHA HECHO]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="FECHA HECHO"
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[GRUPO EDAD PERSONA]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="GRUPO EDAD PERSONA"
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[CANTIDAD ]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="CANTIDAD "
                       lineageId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CANTIDAD ]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DC_COLUMN_CONVERSION.Inputs[Derived Column Input].Columns[GENERO]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="GENERO"
@@ -359,7 +359,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -381,7 +381,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[MUNICIPIO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -403,7 +403,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CODIGO DANE]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -425,7 +425,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[ARMAS MEDIOS]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -447,7 +447,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[FECHA HECHO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -469,7 +469,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GENERO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -491,7 +491,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[GRUPO EDAD PERSONA]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -513,7 +513,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].Columns[CANTIDAD ]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -538,49 +538,49 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[DEPARTAMENTO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="DEPARTAMENTO" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[MUNICIPIO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="MUNICIPIO" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[CODIGO DANE]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="CODIGO DANE" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[ARMAS MEDIOS]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="ARMAS MEDIOS" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[FECHA HECHO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="FECHA HECHO" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[GENERO]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="GENERO" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[GRUPO EDAD PERSONA]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="GRUPO EDAD PERSONA" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\FF_VIOLENCE.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD ]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="CANTIDAD " />
@@ -917,6 +917,10 @@
           Id="Package\Data Flow Task\FF_VIOLENCE"
           TopLeft="401,73" />
         <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\TBL_VIOLENCE_STG"
+          TopLeft="387,310" />
+        <NodeLayout
           Size="211,42"
           Id="Package\Data Flow Task\DC_COLUMN_CONVERSION"
           TopLeft="371,186" />
@@ -942,10 +946,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\TBL_VIOLENCE_STG"
-          TopLeft="387,310" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="475.75,228">

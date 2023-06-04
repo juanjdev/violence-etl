@@ -2,13 +2,48 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ViolenciaIntrafamiliarETL</Name>
-    <LastWriteTime>2023-05-21T03:27:44.7486764Z</LastWriteTime>
+    <LastWriteTime>2023-06-04T17:42:19.0387611Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2023-05-21T03:52:17.0630094Z</LastWriteTime>
+      <Name>EL_VIOLENCE.dtsx</Name>
+      <LastWriteTime>2023-06-02T18:23:47.3933813Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_TIEMPO.dtsx</Name>
+      <LastWriteTime>2023-06-03T05:22:13.0089997Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_GENERO.dtsx</Name>
+      <LastWriteTime>2023-06-03T06:11:52.898601Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_GRUPO_EDAD.dtsx</Name>
+      <LastWriteTime>2023-06-04T16:17:57.0125197Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_LUGAR.dtsx</Name>
+      <LastWriteTime>2023-06-04T17:01:18.3921906Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_CODIGO_DANE.dtsx</Name>
+      <LastWriteTime>2023-06-04T17:17:40.8828107Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_ARMA.dtsx</Name>
+      <LastWriteTime>2023-06-04T17:27:59.89874Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_DIM_CANTIDAD.dtsx</Name>
+      <LastWriteTime>2023-06-04T17:42:19.0157512Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

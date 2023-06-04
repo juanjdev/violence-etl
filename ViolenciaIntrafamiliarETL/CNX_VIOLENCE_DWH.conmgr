@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CNX_VIOLENCE_DWH"
+  DTS:DTSID="{93C65E1D-2826-4CEE-88C7-371237377F48}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=K3RMIT\SQLSERVER;Initial Catalog=VIOLENCE_DWH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-ETL_DIM_TIEMPO-{93C65E1D-2826-4CEE-88C7-371237377F48}K3RMIT\SQLSERVER.UPTC_DWH;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

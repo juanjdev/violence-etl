@@ -11,8 +11,8 @@
       DTS:ColumnNamesInFirstDataRow="True"
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
-      DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Users\Juan J Blanco M\Downloads\datos violencia intrafamiliar\datos_violencia_intrafamiliar_2017_2023.csv">
+      DTS:CodePage="65001"
+      DTS:ConnectionString="D:\k3rmit\Documentos\Especializacion\Mineria de datos\violence-etl\Data\datos_violencia_intrafamiliar_2017_2023.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="DEPARTAMENTO"
-          DTS:DTSID="{B8E71460-8D3A-47E7-810F-8EC37573E67F}"
+          DTS:DTSID="{90820825-89A3-4CF9-83EE-57C8E107C0D8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="MUNICIPIO"
-          DTS:DTSID="{2A3A5EA0-614A-4D66-B412-151F938101B9}"
+          DTS:DTSID="{32F8D4C9-3EFC-4438-A788-B10146EE8FE7}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="CODIGO DANE"
-          DTS:DTSID="{2A87B887-6B12-4155-B289-32756B546DB6}"
+          DTS:DTSID="{6B6FDCF0-137E-4A51-98C9-A38F1324603A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="ARMAS MEDIOS"
-          DTS:DTSID="{7D710667-3BC2-4BEF-B236-92FBB5A5AD9D}"
+          DTS:DTSID="{4770E83C-439E-4E3B-B411-60DD67485519}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="FECHA HECHO"
-          DTS:DTSID="{2993F613-105E-4A2B-A3F0-CC0C0C5948F2}"
+          DTS:DTSID="{34A3E905-0D1A-42E2-A508-DDBB242EFDFC}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="GENERO"
-          DTS:DTSID="{319BA261-1AA8-4CCD-A90B-5C803E562DE8}"
+          DTS:DTSID="{B4C8A79D-F9BA-4281-8901-B3310E34DC73}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="GRUPO EDAD PERSONA"
-          DTS:DTSID="{481EA77F-F2F9-4CEA-B985-B6FFE5B96A39}"
+          DTS:DTSID="{FB8AAC70-F92A-4CC0-B26F-276A5C51AAC6}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="CANTIDAD "
-          DTS:DTSID="{1AE12C1A-AB5A-4093-BA4B-65987C4CC232}"
+          DTS:DTSID="{382521B2-7E75-4D13-BB74-46BF69DE879E}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

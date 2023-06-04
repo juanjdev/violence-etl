@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=DESKTOP-RUM36UI\SQLSERVER;Initial Catalog=VIOLENCE_STG;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{4A48367E-11FA-42C0-87D5-718D5EADAE69}DESKTOP-RUM36UI\SQLSERVER.VIOLENCE_STG;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=K3RMIT\SQLSERVER;Initial Catalog=VIOLENCE_STG;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{4A48367E-11FA-42C0-87D5-718D5EADAE69}DESKTOP-RUM36UI\SQLSERVER.VIOLENCE_STG;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
