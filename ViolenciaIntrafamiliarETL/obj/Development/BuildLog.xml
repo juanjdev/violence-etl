@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ViolenciaIntrafamiliarETL</Name>
-    <LastWriteTime>2023-06-04T17:42:19.0387611Z</LastWriteTime>
+    <LastWriteTime>2023-06-11T04:22:56.6858532Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -38,12 +38,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ETL_DIM_ARMA.dtsx</Name>
-      <LastWriteTime>2023-06-04T17:27:59.89874Z</LastWriteTime>
+      <LastWriteTime>2023-06-04T17:44:16.2181879Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ETL_DIM_CANTIDAD.dtsx</Name>
-      <LastWriteTime>2023-06-04T17:42:19.0157512Z</LastWriteTime>
+      <LastWriteTime>2023-06-04T17:44:14.1041035Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_FACT_CASOS.dtsx</Name>
+      <LastWriteTime>2023-06-11T05:17:58.8218014Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -1,0 +1,2009 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/8/2023 1:43:01 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="K3RMIT"
+  DTS:CreatorName="K3RMIT\espin"
+  DTS:DTSID="{1F55455A-F642-4EDB-B81E-5F0C82CDEC85}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{7219DFA2-8B0B-4CF3-ACE5-980F8A964AD3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DT_ETL_FACT_TABLE"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{17117E7C-C110-4517-A36F-CD5F0777CCD9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DT_ETL_FACT_TABLE"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DC_CONVERSIONES"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input].Columns[DT_FECHA_HECHO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DT_FECHA_HECHO"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[DT_FECHA_HECHO]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8000"
+                      cachedName="STR_NOMBRE_DEPARTAMENTO"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input].Columns[STR_NOMBRE_MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8000"
+                      cachedName="STR_NOMBRE_MUNICIPIO"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input].Columns[INT_CANTIDAD]"
+                      cachedDataType="i4"
+                      cachedName="INT_CANTIDAD"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input].Columns[STR_GENERO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="STR_GENERO"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GENERO]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="STR_GRUPO_EDAD_PERSONA"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GRUPO_EDAD_PERSONA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[SK_FECHA_HECHO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[SK_FECHA_HECHO]"
+                      name="SK_FECHA_HECHO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)([ISNULL](#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[DT_FECHA_HECHO]}) ? "-1" : #{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[DT_FECHA_HECHO]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)(ISNULL(DT_FECHA_HECHO) ? "-1" : DT_FECHA_HECHO)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[LLAVE_LUGAR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="150"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[LLAVE_LUGAR]"
+                      name="LLAVE_LUGAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,150,1252)[UPPER]([TRIM](#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_DEPARTAMENTO]} + #{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_MUNICIPIO]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,150,1252)UPPER(TRIM(STR_NOMBRE_DEPARTAMENTO + STR_NOMBRE_MUNICIPIO))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[SK_DIM_CANTIDAD]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[SK_DIM_CANTIDAD]"
+                      name="SK_DIM_CANTIDAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">INT_CANTIDAD</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[DT_FECHA_CARGA]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[DT_FECHA_CARGA]"
+                      name="DT_FECHA_CARGA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_GENERO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_GENERO]"
+                      name="CONV_GENERO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GENERO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)STR_GENERO</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_EDAD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_EDAD]"
+                      name="CONV_EDAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GRUPO_EDAD_PERSONA]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)STR_GRUPO_EDAD_PERSONA</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="FACT_CASOS_VIOLENCIA"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TBL_FACT_CASOS_VIOLENCIA]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Connections[OleDbConnection]"
+                  connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_FECHA_HECHO]"
+                      cachedDataType="i4"
+                      cachedName="SK_FECHA_HECHO"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_FECHA_HECHO]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[SK_FECHA_HECHO]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_DIM_CANTIDAD]"
+                      cachedDataType="i4"
+                      cachedName="SK_DIM_CANTIDAD"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_CANTIDAD]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[SK_DIM_CANTIDAD]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_DIM_GENERO]"
+                      cachedDataType="i4"
+                      cachedName="SK_DIM_GENERO"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_GENERO]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Match Output].Columns[SK_DIM_GENERO]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_DIM_GRUPO_EDAD]"
+                      cachedDataType="i4"
+                      cachedName="SK_DIM_GRUPO_EDAD"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_GRUPO_EDAD]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Match Output].Columns[SK_DIM_GRUPO_EDAD]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_DIM_ARMA]"
+                      cachedDataType="i4"
+                      cachedName="SK_DIM_ARMA"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_ARMA]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Match Output].Columns[SK_DIM_ARMA]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_DIM_LUGAR]"
+                      cachedDataType="i4"
+                      cachedName="SK_DIM_LUGAR"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_LUGAR]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Match Output].Columns[SK_DIM_LUGAR]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[DT_FECHA_CARGA]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DT_FECHA_CARGA"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_ACTUALIZACION]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[DT_FECHA_CARGA]" />
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].Columns[SK_DIM_CODIGO_DANE]"
+                      cachedDataType="i4"
+                      cachedName="SK_DIM_CODIGO_DANE"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_CODIGO_DANE]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Match Output].Columns[SK_DIM_CODIGO_DANE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_FECHA_HECHO]"
+                      dataType="i4"
+                      name="SK_FECHA_HECHO" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_LUGAR]"
+                      dataType="i4"
+                      name="SK_DIM_LUGAR" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_GENERO]"
+                      dataType="i4"
+                      name="SK_DIM_GENERO" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_GRUPO_EDAD]"
+                      dataType="i4"
+                      name="SK_DIM_GRUPO_EDAD" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_CODIGO_DANE]"
+                      dataType="i4"
+                      name="SK_DIM_CODIGO_DANE" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_ARMA]"
+                      dataType="i4"
+                      name="SK_DIM_ARMA" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_CANTIDAD]"
+                      dataType="i4"
+                      name="SK_DIM_CANTIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_ACTUALIZACION]"
+                      dataType="dbTimeStamp"
+                      name="DT_FECHA_ACTUALIZACION" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DIM_ARMA"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[TBL_DIM_ARMA_T0]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TBL_DIM_ARMA_T0]) [refTable]
+where [refTable].[STR_ARMA] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_DIM_ARMA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="STR_ARMA" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DT_FECHA_CARGA" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_ARMAS_MEDIOS]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Connections[OleDbConnection]"
+                  connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Inputs[Lookup Input].Columns[STR_ARMAS_MEDIOS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="STR_ARMAS_MEDIOS"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_ARMAS_MEDIOS]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">STR_ARMA</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Match Output].Columns[SK_DIM_ARMA]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Match Output].Columns[SK_DIM_ARMA]"
+                      name="SK_DIM_ARMA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_DIM_ARMA</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DIM_CODIGO_DANE"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[TBL_DIM_CODIGO_DANE_T0]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TBL_DIM_CODIGO_DANE_T0]) [refTable]
+where [refTable].[STR_CODIGO_DANE] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_DIM_CODIGO_DANE" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="STR_CODIGO_DANE" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DT_FECHA_CARGA" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_CODIGO_DANE]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Connections[OleDbConnection]"
+                  connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Inputs[Lookup Input].Columns[STR_CODIGO_DANE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="STR_CODIGO_DANE"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_CODIGO_DANE]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">STR_CODIGO_DANE</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Match Output].Columns[SK_DIM_CODIGO_DANE]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Match Output].Columns[SK_DIM_CODIGO_DANE]"
+                      name="SK_DIM_CODIGO_DANE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_DIM_CODIGO_DANE</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DIM_GENERO"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[TBL_DIM_GENERO_T0]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TBL_DIM_GENERO_T0]) [refTable]
+where [refTable].[STR_GENERO] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_DIM_GENERO" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="STR_GENERO" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DT_FECHA_CARGA" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_GENERO]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Connections[OleDbConnection]"
+                  connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Inputs[Lookup Input].Columns[CONV_GENERO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CONV_GENERO"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_GENERO]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">STR_GENERO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Match Output].Columns[SK_DIM_GENERO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Match Output].Columns[SK_DIM_GENERO]"
+                      name="SK_DIM_GENERO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_DIM_GENERO</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DIM_GRUPO_EDAD"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[TBL_DIM_GRUPO_EDAD_T0]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TBL_DIM_GRUPO_EDAD_T0]) [refTable]
+where [refTable].[STR_GRUPO_EDAD] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_DIM_GRUPO_EDAD" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="STR_GRUPO_EDAD" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DT_FECHA_CARGA" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_EDAD]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Connections[OleDbConnection]"
+                  connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Inputs[Lookup Input].Columns[CONV_EDAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CONV_EDAD"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[CONV_EDAD]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">STR_GRUPO_EDAD</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Match Output].Columns[SK_DIM_GRUPO_EDAD]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Match Output].Columns[SK_DIM_GRUPO_EDAD]"
+                      name="SK_DIM_GRUPO_EDAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_DIM_GRUPO_EDAD</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DIM_LUGAR"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  [SK_DIM_LUGAR],
+    UPPER(TRIM([STR_DEPARTAMENTO]+[STR_MUNICIPIO])) AS LLAVE_LUGAR
+  FROM [dbo].[TBL_DIM_LUGAR_T0]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT  [SK_DIM_LUGAR],
+    UPPER(TRIM([STR_DEPARTAMENTO]+[STR_MUNICIPIO])) AS LLAVE_LUGAR
+  FROM [dbo].[TBL_DIM_LUGAR_T0]) [refTable]
+where [refTable].[LLAVE_LUGAR] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_DIM_LUGAR" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LLAVE_LUGAR" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[LLAVE_LUGAR]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Connections[OleDbConnection]"
+                  connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Inputs[Lookup Input].Columns[LLAVE_LUGAR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="LLAVE_LUGAR"
+                      lineageId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output].Columns[LLAVE_LUGAR]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">LLAVE_LUGAR</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Match Output].Columns[SK_DIM_LUGAR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Match Output].Columns[SK_DIM_LUGAR]"
+                      name="SK_DIM_LUGAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SK_DIM_LUGAR</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SOURCE_FACT"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+CONVERT(VARCHAR(10), [DT_FECHA_HECHO],112) AS [DT_FECHA_HECHO],
+REPLACE(UPPER(TRANSLATE([STR_NOMBRE_DEPARTAMENTO], 
+'ñáéíóúàèìòùãõâêîôôäëïöüçÑÁÉÍÓÚÀÈÌÒÙÃÕÂÊÎÔÛÄËÏÖÜÇ ', 
+'naeiouaeiouaoaeiooaeioucNAEIOUAEIOUAOAEIOOAEIOUC_')),'_',' ') AS [STR_NOMBRE_DEPARTAMENTO],
+CASE WHEN [STR_NOMBRE_MUNICIPIO] = '-' THEN 'NO REPORTA' 
+ELSE REPLACE(UPPER(TRANSLATE([STR_NOMBRE_MUNICIPIO], 
+'ñáéíóúàèìòùãõâêîôôäëïöüçÑÁÉÍÓÚÀÈÌÒÙÃÕÂÊÎÔÛÄËÏÖÜÇ ', 
+'naeiouaeiouaoaeiooaeioucNAEIOUAEIOUAOAEIOOAEIOUC_')),'_',' ') END AS [STR_NOMBRE_MUNICIPIO],
+CASE WHEN [STR_GENERO] = '-' THEN 'NO REPORTADO'
+ELSE [STR_GENERO] END AS [STR_GENERO],
+CASE WHEN [STR_GRUPO_EDAD_PERSONA] = '-' THEN 'NO REPORTADO'
+ELSE [STR_GRUPO_EDAD_PERSONA] END AS STR_GRUPO_EDAD_PERSONA,
+[STR_CODIGO_DANE] ,
+[STR_ARMAS_MEDIOS] ,
+[INT_CANTIDAD]
+FROM TBL_VIOLENCE_STG;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Connections[OleDbConnection]"
+                  connectionManagerID="{4A48367E-11FA-42C0-87D5-718D5EADAE69}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_STG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[DT_FECHA_HECHO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[DT_FECHA_HECHO]"
+                      length="10"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[DT_FECHA_HECHO]"
+                      name="DT_FECHA_HECHO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_NOMBRE_DEPARTAMENTO]"
+                      length="8000"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      name="STR_NOMBRE_DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_NOMBRE_MUNICIPIO]"
+                      length="8000"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_NOMBRE_MUNICIPIO]"
+                      name="STR_NOMBRE_MUNICIPIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GENERO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_GENERO]"
+                      length="20"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GENERO]"
+                      name="STR_GENERO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_GRUPO_EDAD_PERSONA]"
+                      length="20"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      name="STR_GRUPO_EDAD_PERSONA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_CODIGO_DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_CODIGO_DANE]"
+                      length="20"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_CODIGO_DANE]"
+                      name="STR_CODIGO_DANE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_ARMAS_MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_ARMAS_MEDIOS]"
+                      length="150"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[STR_ARMAS_MEDIOS]"
+                      name="STR_ARMAS_MEDIOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[INT_CANTIDAD]"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]"
+                      name="INT_CANTIDAD"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[DT_FECHA_HECHO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DT_FECHA_HECHO" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_NOMBRE_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8000"
+                      name="STR_NOMBRE_DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_NOMBRE_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8000"
+                      name="STR_NOMBRE_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_GENERO]"
+                      dataType="wstr"
+                      length="20"
+                      name="STR_GENERO" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_GRUPO_EDAD_PERSONA]"
+                      dataType="wstr"
+                      length="20"
+                      name="STR_GRUPO_EDAD_PERSONA" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_CODIGO_DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="STR_CODIGO_DANE" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[STR_ARMAS_MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="STR_ARMAS_MEDIOS" />
+                    <externalMetadataColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output].ExternalColumns[INT_CANTIDAD]"
+                      dataType="i4"
+                      name="INT_CANTIDAD" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[DT_FECHA_HECHO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[DT_FECHA_HECHO]"
+                      name="DT_FECHA_HECHO" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8000"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_NOMBRE_DEPARTAMENTO]"
+                      name="STR_NOMBRE_DEPARTAMENTO" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_NOMBRE_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8000"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_NOMBRE_MUNICIPIO]"
+                      name="STR_NOMBRE_MUNICIPIO" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_GENERO]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_GENERO]"
+                      name="STR_GENERO" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_GRUPO_EDAD_PERSONA]"
+                      name="STR_GRUPO_EDAD_PERSONA" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_CODIGO_DANE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_CODIGO_DANE]"
+                      name="STR_CODIGO_DANE" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_ARMAS_MEDIOS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[STR_ARMAS_MEDIOS]"
+                      name="STR_ARMAS_MEDIOS" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[INT_CANTIDAD]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[INT_CANTIDAD]"
+                      name="INT_CANTIDAD" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[Derived Column Output]"
+              endId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output]"
+              endId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output1]"
+              endId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output2]"
+              endId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output3]"
+              endId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output4]"
+              endId="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DT_ETL_FACT_TABLE.Paths[OLE DB Source Output]"
+              endId="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\DT_ETL_FACT_TABLE\SOURCE_FACT.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE FACT TABLE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A18EA2C9-F597-4B89-A4AF-E65273788023}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE FACT TABLE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{93C65E1D-2826-4CEE-88C7-371237377F48}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[TBL_FACT_CASOS_VIOLENCIA];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{654A3A47-81C8-4845-9871-831EE1669E01}"
+      DTS:From="Package\TRUNCATE FACT TABLE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DT_ETL_FACT_TABLE" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\DT_ETL_FACT_TABLE"
+          TopLeft="205,149" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\TRUNCATE FACT TABLE"
+          TopLeft="201,49" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="296.75,91">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DT_ETL_FACT_TABLE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\DT_ETL_FACT_TABLE\SOURCE_FACT"
+          TopLeft="29,17" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DT_ETL_FACT_TABLE\DC_CONVERSIONES"
+          TopLeft="122,93" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[OLE DB Source Output]"
+          TopLeft="103.5,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106,34"
+              Start="0,0"
+              End="106,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="102,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="102,17"
+                    Point2="106,17"
+                    Point3="106,21" />
+                  <mssgle:LineSegment
+                    End="106,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO"
+          TopLeft="436,92" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[Derived Column Output]"
+          TopLeft="297,113.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139,0"
+              Start="0,0"
+              End="131.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="131.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="194,42"
+          Id="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD"
+          TopLeft="426,175" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output]"
+          TopLeft="521.5,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA"
+          TopLeft="134,173" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output1]"
+          TopLeft="426,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137,0"
+              Start="0,0"
+              End="-129.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-129.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-112.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="200,42"
+          Id="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE"
+          TopLeft="110,258" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output2]"
+          TopLeft="210.75,215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="160,42"
+          Id="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR"
+          TopLeft="445,256" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output3]"
+          TopLeft="310,278">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135,0"
+              Start="0,0"
+              End="127.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="127.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.55861328125,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="201,42"
+          Id="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA"
+          TopLeft="613,343" />
+        <EdgeLayout
+          Id="Package\DT_ETL_FACT_TABLE.Paths[Lookup Match Output4]"
+          TopLeft="525,298">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.5,45"
+              Start="0,0"
+              End="188.5,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="184.5,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.5,22.5"
+                    Point2="188.5,22.5"
+                    Point3="188.5,26.5" />
+                  <mssgle:LineSegment
+                    End="188.5,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="46.05861328125,27.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\SOURCE_FACT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\LKP_DIM_GENERO">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TBL_DIM_GENERO_T0]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\LKP_DIM_GRUPO_EDAD">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TBL_DIM_GRUPO_EDAD_T0]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\LKP_DIM_ARMA">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TBL_DIM_ARMA_T0]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\LKP_DIM_CODIGO_DANE">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TBL_DIM_CODIGO_DANE_T0]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\LKP_DIM_LUGAR">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DT_ETL_FACT_TABLE\FACT_CASOS_VIOLENCIA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

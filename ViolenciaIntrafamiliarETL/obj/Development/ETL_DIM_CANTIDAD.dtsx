@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{0EC1AC3C-52C6-4F0B-BB26-A057534A29BE}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6F1BAD88-9603-460C-9C6F-94EB29435CFC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -250,7 +250,7 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -277,7 +277,7 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
                       refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[INT_CANTIDAD]"
                       cachedDataType="i4"
                       cachedName="INT_CANTIDAD"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]">
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -352,11 +352,11 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Data Flow Task\TBL_DIM_CANTIDAD"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="TBL_DIM_CANTIDAD"
               usesDispositions="true"
               version="4">
               <properties>
@@ -409,7 +409,7 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Connections[OleDbConnection]"
                   connectionManagerID="{93C65E1D-2826-4CEE-88C7-371237377F48}:external"
                   connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_DWH]"
                   description="The OLE DB runtime connection used to access the database."
@@ -417,37 +417,37 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INT_CANTIDAD]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].Columns[INT_CANTIDAD]"
                       cachedDataType="i4"
                       cachedName="INT_CANTIDAD"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CANTIDAD]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]" />
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CANTIDAD]"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FECHA_CARGA]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].Columns[FECHA_CARGA]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FECHA_CARGA"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_CARGA]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_CARGA]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[FECHA_CARGA]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_CANTIDAD]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].ExternalColumns[SK_DIM_CANTIDAD]"
                       dataType="i4"
                       name="SK_DIM_CANTIDAD" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CANTIDAD]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CANTIDAD]"
                       dataType="i4"
                       name="NUM_CANTIDAD" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_CARGA]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input].ExternalColumns[DT_FECHA_CARGA]"
                       dataType="dbTimeStamp"
                       name="DT_FECHA_CARGA" />
                   </externalMetadataColumns>
@@ -455,22 +455,22 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -479,11 +479,11 @@ where [refTable].[NUM_CANTIDAD] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source"
+              refId="Package\Data Flow Task\TBL_VIOLENCE"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="OLE DB Source"
+              name="TBL_VIOLENCE"
               usesDispositions="true"
               version="7">
               <properties>
@@ -530,7 +530,7 @@ ORDER BY 1 ASC;</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\TBL_VIOLENCE.Connections[OleDbConnection]"
                   connectionManagerID="{4A48367E-11FA-42C0-87D5-718D5EADAE69}:external"
                   connectionManagerRefId="Project.ConnectionManagers[CNX_VIOLENCE_STG]"
                   description="The OLE DB runtime connection used to access the database."
@@ -538,47 +538,47 @@ ORDER BY 1 ASC;</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]"
+                      refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[INT_CANTIDAD]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].ExternalColumns[INT_CANTIDAD]"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].Columns[INT_CANTIDAD]"
                       name="INT_CANTIDAD"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[INT_CANTIDAD]"
+                      refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output].ExternalColumns[INT_CANTIDAD]"
                       dataType="i4"
                       name="INT_CANTIDAD" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[INT_CANTIDAD]"
+                      refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output].Columns[INT_CANTIDAD]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[INT_CANTIDAD]"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output].Columns[INT_CANTIDAD]"
                       name="INT_CANTIDAD" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -600,14 +600,14 @@ ORDER BY 1 ASC;</property>
               startId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[NUEVOS]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\TBL_DIM_CANTIDAD.Inputs[OLE DB Destination Input]"
               name="NUEVOS"
               startId="Package\Data Flow Task\Conditional Split.Outputs[NUEVOS]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow Task\TBL_VIOLENCE.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -638,28 +638,28 @@ ORDER BY 1 ASC;</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
+          Size="151,42"
+          Id="Package\Data Flow Task\TBL_VIOLENCE"
           TopLeft="276,16" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="275,320" />
+          Size="179,42"
+          Id="Package\Data Flow Task\TBL_DIM_CANTIDAD"
+          TopLeft="267,320" />
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task\Conditional Split"
-          TopLeft="283,242" />
+          TopLeft="278,243" />
         <NodeLayout
           Size="113,42"
           Id="Package\Data Flow Task\Lookup"
-          TopLeft="301,168" />
+          TopLeft="292,168" />
         <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="276,92" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="352,58">
+          TopLeft="352.25,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -681,7 +681,7 @@ ORDER BY 1 ASC;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="355.25,134">
+          TopLeft="350.75,134">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -703,49 +703,49 @@ ORDER BY 1 ASC;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="359,210">
+          TopLeft="352,210">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32"
+              EndConnector="0,33"
               Start="0,0"
-              End="0,24.5">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5" />
+                    End="0,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.4453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,6.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[NUEVOS]"
-          TopLeft="360.5,284">
+          TopLeft="356,285">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36"
+              EndConnector="0,35"
               Start="0,0"
-              End="0,28.5">
+              End="0,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.23748046875,9.46337890625,38.4749609375,9.5732421875"
+              BoundingBox="-19.23748046875,8.96337890625,38.4749609375,9.5732421875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -753,7 +753,7 @@ ORDER BY 1 ASC;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\TBL_VIOLENCE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -761,7 +761,7 @@ ORDER BY 1 ASC;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\TBL_DIM_CANTIDAD">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
